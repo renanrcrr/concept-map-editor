@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+
+<!ELEMENT frase (#PCDATA)>
+
+
+<!ELEMENT desc (#PCDATA)>
+
+
+<!ELEMENT supertipo (desc? , (frase+ | supertipo+ ) )>
+<!ATTLIST supertipo valor CDATA #IMPLIED>
+
+
+<!ELEMENT taxonomia (supertipo)+>
+<!ATTLIST taxonomia versao CDATA #IMPLIED>

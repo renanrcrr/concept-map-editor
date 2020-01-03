@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE taxonomia SYSTEM "cmeditor/io/Taxonomia.dtd"> 
+<taxonomia versao="1.0">
+	<supertipo valor="assimetria">
+		<desc>A dimensão de assimetria representa a relação semântica entre dois conceitos na qual a mudança da ordem de leitura dos conceitos resulta em alteração substancial no sentido da proposição. Por exemplo, dada a proposição "CASA possui JANELA", se alterarmos a posição dos conceitos, a proposição resultante "JANELA possui CASA" não mantém o sentido inicial. A dimensão de simetria, por outro lado, representa a relação semântica entre conceitos na qual o significado da proposição é mantido caso haja mudança na posição dos conceitos.</desc>
+		<supertipo valor="processo">
+			<desc>Esta dimensão representa a ligação semântica existente entre conceitos envolvidos em um processo. Um processo utiliza entradas e gera saídas através de alguma transformação. Por exemplo, na proposição "VAPOR é transformado em CHUVA", o conceito VAPOR é a entrada do processo e o conceito CHUVA é a saída do processo. A transformação (no caso, o fenômeno da condensação) não é mencionada no exemplo dado. A dimensão de processo possui subdimensões que representam as possíveis ligações entre conceitos.</desc>
+			<supertipo valor="entrada">
+				<desc>A dimensão "entrada" representa a ligação semântica que existe entre conceitos na qual um conceito é entrada de um processo. Assim, por exemplo, na proposição "CONDENSAÇÃO utiliza VAPOR", o conceito CONDENSAÇÃO representa o processo em si, enquanto o conceito VAPOR representa a entrada para o processo.</desc>                                        
+                <supertipo valor="sentido_direto">
+                	<desc>Descrição do supertipo</desc>   
+					<frase>usa</frase>
+					<frase>usa como entrada</frase>
+					<frase>utiliza</frase>
+					<frase>utiliza como entrada</frase>
+					<frase>transforma</frase>
+					<frase>converte</frase>
+					<frase>altera</frase>
+					<frase>modifica</frase>
+					<frase>faz uso de</frase>
+				</supertipo>
+				<supertipo valor="sentido_inverso">
+                                        <desc>Descrição do supertipo</desc>   
+					<frase>é entrada de</frase>
+					<frase>é usado por</frase>
+					<frase>é utilizado por</frase>
+					<frase>é transformado por</frase>
+					<frase>é convertido por</frase>
+					<frase>é alterado por</frase>
+					<frase>é modificado por</frase>
+					<frase>é mutado por</frase>
+				</supertipo>
+			</supertipo>
+			<supertipo valor="saída">
+				<desc>A dimensão "saída" representa a ligação existente entre conceitos na qual um dos conceitos representa a saída, ou seja, o produto de um processo. Por exemplo, dada a proposição "CONDENSAÇÃO gera CHUVA", o conceito CONDENSAÇÃO representa o processo em si, enquanto o conceito CHUVA representa a saída do processo.</desc>
+				<supertipo valor="sentido_direto">
+                                        <desc>Descrição do supertipo</desc>   
+					<frase>gera</frase>
+					<frase>causa</frase>
+					<frase>produz</frase>
+					<frase>provoca</frase>
+					<frase>resulta em</frase>
+					<frase>tem como resultado</frase>
+					<frase>forma</frase>
+					<frase>tem como conseqüência</frase>
+					<frase>tem como saída</frase>
+				</supertipo>
+				<supertipo valor="sentido_inverso">
+                                        <desc>Descrição do supertipo</desc>   
+					<frase>é gerado por</frase>
+					<frase>é causado por</frase>
+					<frase>é produzido por</frase>
+					<frase>é provocado por</frase>
+					<frase>é resultado de</frase>
+					<frase>é formado por</frase>
+					<frase>é conseqüência de</frase>
+					<frase>é saída de</frase>
+				</supertipo>
+			</supertipo>
+			<supertipo valor="transformação">
+				<desc>Esta dimensão representa a ligação existente entre dois conceitos na qual um conceito é uma entrada de um processo e o outro conceito é uma saída do processo. Neste tipo de proposição, o processo não é explicitamente mencionado. Por exemplo, na proposição "TRIGO é transformado em PÃO", os conceitos TRIGO e PÃO estão ligados por uma frase de ligação da dimensão de transformação. Esta dimensão possui duas subdimensões, dependendo de como o processo é controlado.</desc>
+				<supertipo valor="controle_interno">
+					<desc>Esta dimensão representa a ligação entre dois conceitos em que um dos conceitos é a entrada e o outro é a saída de um processo. Adicionalmente, esta dimensão representa que o processo é regulado/controlado pelo conceito de entrada, ou seja, não há uma entidade externa que efetive este controle. Por exemplo, na proposição "LAGARTA converte-se em BORBOLETA", os conceitos LAGARTA e BORBOLETA representam, respectivamente, a entrada e a saída do processo. Adicionalmente, este processo é controlado por um dos conceitos (no caso, LAGARTA).</desc>
+					<supertipo valor="sentido_direto">
+                                                <desc>Descrição do supertipo</desc>   
+						<frase>transforma-se em</frase>
+						<frase>converte-se em</frase>
+						<frase>modifica-se para</frase>
+						<frase>altera-se para</frase>
+						<frase>muta-se em</frase>
+					</supertipo>
+					<supertipo valor="sentido_inverso">
+                                                <desc>Descrição do supertipo</desc>   
+						<frase>provém de</frase>
+						<frase>surge de</frase>
+						<frase>tem como origem</frase>
+						<frase>resulta de</frase>
+						<frase>é conseqüência de</frase>
+						<frase>é alteração de</frase>
+						<frase>é transformação de</frase>
+						<frase>é conversão de</frase>
+						<frase>é mutação de</frase>
+						<frase>é modificação de</frase>
+					</supertipo>
+				</supertipo>
+				<supertipo valor="controle_interno">
+					<desc>Esta dimensão representa a ligação entre conceitos que representam a entrada e a saída de um processo. Adicionalmente, este processo é regulado/controlado/disparado por uma entidade externa. Assim, por exemplo, a proposição "TRIGO é transformado em PÃO", os conceitos TRIGO e PÃO são a entrada e a saída do processo de cozimento, que é disparado por uma entidade externa (o cozinheiro, no caso).</desc>
+					<supertipo valor="sentido_direto">
+                                                <desc>Descrição do supertipo</desc>   
+						<frase>é transformado em</frase>
+						<frase>é convertido em</frase>
+						<frase>é alterado em</frase>
+						<frase>é mutado em</frase>
+						<frase>é modificado em</frase>
+						<frase>resulta em</frase>
+						<frase>tem como conseqüência</frase>
+					</supertipo>
+					<supertipo valor="sentido_inverso">
+                                                <desc>Descrição do supertipo</desc>   
+						<frase>provém de</frase>
+						<frase>surge de</frase>
+						<frase>tem como origem</frase>
+						<frase>resulta de</frase>
+						<frase>é conseqüência de</frase>
+						<frase>é alteração de</frase>
+						<frase>é transformação de</frase>
+						<frase>é conversão de</frase>
+						<frase>é mutação de</frase>
+						<frase>é modificação de</frase>
+					</supertipo>
+				</supertipo>
+			</supertipo>
+		</supertipo>
+		<supertipo valor="temporalidade">
+                    <desc>Esta dimensão representa a ligação semântica entre conceitos na qual se deseja expressar o sentido de temporalidade, ou seja, na qual dois conceitos são ordenados/comparados em relação ao tempo. Assim, as proposições "EVAPORAÇÃO precede CONDENSAÇÃO", "UM MÊS é mais longo que UMA SEMANA" e "CURSO dura UM MÊS", são exemplos de uso da dimensão temporal. Observa-se que, nestes casos, a mudança da ordem de leitura dos conceitos altera o sentido da frase. Por esta razão, esta dimensão encontra-se classificada sob a dimensão de assimetria. Por outro lado, há uma outra dimensão de temporalidade, classificada sob a dimensão de simetria, para os casos em que a mudança da ordem dos conceitos não influencia no sentido da proposição.</desc>
+			<supertipo valor="ordenação">
+				<desc>A dimensão de ordenação representa a ligação que existe entre conceitos quando tais conceitos são ordenados no tempo, ou seja, quando se deseja expressar que um conceito existiu/ocorreu/persistiu em um momento anterior a outro. Assim, por exemplo, a proposição "OUTUBRO sucede SETEMBRO" usa uma frase de ligação desta dimensão. Nesta proposição, os conceitos encontram-se ordenados no tempo.</desc>
+				<supertipo valor="sentido_direto">
+                                        <desc>Descrição do supertipo</desc>   
+					<frase>precede</frase>
+					<frase>antecede</frase>
+					<frase>ocorre antes de</frase>
+					<frase>é anterior a</frase>
+					<frase>é primeiro que</frase>
+					<frase>existe antes que</frase>
+					<frase>é antes de</frase>
+					<frase>é sucedido por</frase>
+				</supertipo>
+				<supertipo valor="sentido_inverso">
+                                        <desc>Descrição do supertipo</desc>   
+					<frase>é precedido por</frase>
+					<frase>é antecedido por</frase>
+					<frase>sucede</frase>
+					<frase>segue</frase>
+					<frase>é posterior que</frase>
+					<frase>ocorre depois de</frase>
+					<frase>existe depois que</frase>
+					<frase>é depois de</frase>
+				</supertipo>
+			</supertipo>
+			<supertipo valor="comparação">
+				<desc>Esta dimensão representa a ligação semântica entre dois conceitos na qual se compara a duração de um conceito em relação à duração do outro. Por exemplo, na proposição "MARÇO é mais longo que FEVEREIRO", os dois conceitos são comparados com relação a suas respectivas durabilidades.</desc>
+				<supertipo valor="sentido_direto">
+                                        <desc>Descrição do supertipo</desc>   
+					<frase>é mais longo que</frase>
+					<frase>é maior que</frase>
+					<frase>leva mais tempo que</frase>
+					<frase>é mais duradouro que</frase>
+					<frase>dura mais tempo que</frase>
+				</supertipo>
+				<supertipo valor="sentido_inverso">
+                                        <desc>Descrição do supertipo</desc>   
+                                	<frase>é mais curto que</frase>
+					<frase>é menor que</frase>
+					<frase>leva menos tempo que</frase>
+					<frase>é menos duradouro que</frase>
+					<frase>dura menos tempo que</frase>
+				</supertipo>
+			</supertipo>
+			<supertipo valor="duração">
+				<desc>Esta dimensão possui frases de ligação que conectam um conceito a sua respectiva duração. Assim, por exemplo, na proposição "CURSO dura UM MÊS", a duração do conceito CURSO é de UM MÊS, e isso é indicado pela frase de ligação utilizada. Como se pode observar, esta dimensão é assimétrica, pois a alteração na ordem de leitura dos conceitos altera o sentido da proposição.</desc>
+				<supertipo valor="sentido_direto">
+                                        <desc>Descrição do supertipo</desc>                                   
+					<frase>dura</frase>
+					<frase>leva</frase>
+					<frase>existe por</frase>
+					<frase>ocorre por</frase>
+				</supertipo>
+				<supertipo valor="sentido_inverso">
+                                        <desc>Descrição do supertipo</desc>                                   
+					<frase>é o tempo que dura o</frase>
+					<frase>é o tempo que leva o</frase>
+					<frase>é a duração de</frase>
+					<frase>é o intervalo de tempo do</frase>
+					<frase>é o tempo de existência de</frase>
+				</supertipo>
+			</supertipo>
+		</supertipo>
+		<supertipo valor="definição">
+			<desc>A dimensão de definição agrega as relações semânticas entre conceitos nas quais um conceito define outro. Há formas diferentes de se expressar uma definição: um conceito pode ser definido em outro conceito, por outro conceito ou como outro conceito. Estas formas diferentes de definição são detalhadas nas subdimensões desta dimensão.</desc>
+			<supertipo valor="definidor">
+				<desc>Esta dimensão representa a ligação semântica existente entre dois conceitos na qual um dos conceitos é definido por outro. Assim, por exemplo, na proposição "PRIORIDADE é definida por DIRETORIA", o conceito PRIORIDADE representa aquilo que é definido, enquanto que o conceito DIRETORIA representa o agente da definição, ou seja, a entidade que efetivamente define.</desc>
+				<supertipo valor="sentido_direto">
+                                        <desc>Descrição do supertipo</desc>                                   
+					<frase>define</frase>
+					<frase>delimita</frase>
+					<frase>determina</frase>
+					<frase>decide</frase>
+					<frase>demarca</frase>
+					<frase>decreta</frase>
+				</supertipo>
+				<supertipo valor="sentido_inverso">
+                                        <desc>Descrição do supertipo</desc>                                   
+					<frase>é definido por</frase>
+					<frase>é delimitado por</frase>
+					<frase>é determinado por</frase>
+					<frase>é decidido por</frase>
+					<frase>é demarcado por</frase>
+					<frase>é decretado por</frase>
+				</supertipo>
+			</supertipo>
+			<supertipo valor="definido">
+				<desc>Esta dimensão semântica agrega a ligação existente entre dois conceitos, na qual um dos conceitos é definido como o outro. Assim, por exemplo, na proposição "SAÚDE é definida como PRIORIDADE", o conceito SAÚDE é aquilo que se deseja definir e o conceito PRIORIDADE é a definição. Observa-se que neste tipo de proposição não se explicita o agente da definição, ou seja, quem efetiva a definição.</desc>
+				<supertipo valor="sentido_direto">
+                                        <desc>Descrição do supertipo</desc>                                   
+					<frase>é definido como</frase>
+					<frase>é delimitado como</frase>
+					<frase>é determinado como</frase>
+					<frase>é decidido como</frase>
+					<frase>é demarcado como</frase>
+					<frase>é decretado como</frase>
+					<frase>é</frase>
+				</supertipo>
+				<supertipo valor="sentido_inverso">
+                                        <desc>Descrição do supertipo</desc>                                   
+					<frase>é definição de</frase>
+				</supertipo>
+			</supertipo>
+			<supertipo valor="inclusão">
+				<desc>Esta dimensão agrega frases de ligação que representam a ligação semântica existente entre dois conceitos na qual um conceito é definido dentro de outro. Assim, por exemplo, na proposição "TEOREMA é definido em LIVRO", entende-se que a definição do conceito TEOREMA encontra-se dentro do conceito LIVRO.</desc>
+				<supertipo valor="sentido_direto">
+                                        <desc>Descrição do supertipo</desc>                                   
+					<frase>é definido em</frase>
+					<frase>é delimitado em</frase>
+					<frase>é determinado em</frase>
+					<frase>é decidido em</frase>
+					<frase>é demarcado em</frase>
+					<frase>é decretado em</frase>
+				</supertipo>
+				<supertipo valor="sentido_inverso">
+                                        <desc>Descrição do supertipo</desc>                                   
+					<frase>possui definição de</frase>
+					<frase>possui delimitação de</frase>
+					<frase>possui determinação de</frase>
+					<frase>possui decisão de</frase>
+					<frase>possui demarcação de</frase>
+					<frase>tem definição de</frase>
+					<frase>tem delimitação de</frase>
+					<frase>tem determinação de</frase>
+					<frase>tem decisão de</frase>
+					<frase>tem demarcação de</frase>
+				</supertipo>
+			</supertipo>
+		</supertipo>
+		<supertipo valor="classificação">
+                    <desc>A dimensão de classificação representa o relacionamento entre dois conceitos no qual um conceito é supertipo, classe, categoria de outro, ou seja, um conceito é uma generalização de outro. Isso não é o mesmo que a idéia de exemplificação, pois em um exemplo não é uma subclasse, e sim uma instância da classe ligada a ele. Assim, por exemplo, na proposição "GATO é um tipo de FELINO", o conceito GATO é uma especialização do conceito FELINO.</desc>
+			<supertipo valor="sentido_direto">
+                                <desc>Descrição do supertipo</desc>                           
+				<frase>pode aparecer como</frase>
+				<frase>tem tipo</frase>
+				<frase>pode ser</frase>
+				<frase>tem subtipo</frase>
+				<frase>tem classe</frase>
+				<frase>tem subclasse</frase>
+				<frase>é supertipo de</frase>
+				<frase>é superclasse de</frase>
+			</supertipo>
+			<supertipo valor="sentido_inverso">
+                                <desc>Descrição do supertipo</desc>                           
+				<frase>é forma de</frase>
+				<frase>é tipo de</frase>
+				<frase>é subtipo de</frase>
+				<frase>é subclasse de</frase>
+				<frase>é classe de</frase>
+				<frase>é forma de</frase>
+				<frase>é classificado como</frase>
+				<frase>tem supertipo</frase>
+				<frase>tem superclasse</frase>
+			</supertipo>
+		</supertipo>
+		<supertipo valor="caracterização">
+			<desc>Esta dimensão representa a ligação semântica existente quando um conceito é uma característica, atributo ou propriedade de outro. Assim, por exemplo, a proposição "LATIDO é atributo de CACHORRO" representa que o conceito CACHORRO possui uma característica LATIDO. Em alguns casos, esta dimensão representa a idéia de partição. Assim, dependendo da situação, deve-se considerar também o uso de partição para representar o relacionamento entre os conceitos. </desc>
+			<supertipo valor="sentido_direto">
+                                <desc>Descrição do supertipo</desc>                           
+				<frase>tem atributo</frase>
+				<frase>tem como atributo</frase>
+				<frase>tem característica</frase>
+				<frase>tem como característica</frase>
+				<frase>tem propriedade</frase>
+				<frase>tem como propriedade</frase>
+			</supertipo>
+			<supertipo valor="sentido_inverso">
+                                <desc>Descrição do supertipo</desc>                           
+				<frase>é atributo de</frase>
+				<frase>é característica de</frase>
+				<frase>é propriedade de</frase>
+			</supertipo>
+		</supertipo>
+		<supertipo valor="exemplificação">
+			<desc>Esta dimensão agrega as frases de ligação que representam o relacionamento entre dois conceitos no qual um conceito é um exemplo de outro. Assim, por exemplo, na proposição "BRASIL é um exemplo de PAÍS", o conceito PAÍS é exemplificado por BRASIL. É importante não confundir esta dimensão com a dimensão de classificação, na qual um conceito é uma especialização, e não uma instanciação, de outro.</desc>
+			<supertipo valor="sentido_direto">
+                                <desc>Descrição do supertipo</desc>                           
+				<frase>tem exemplo</frase>
+				<frase>tem como exemplo</frase>
+				<frase>tem instância</frase>
+				<frase>tem como instância</frase>
+				<frase>é exemplificado por</frase>
+			</supertipo>
+			<supertipo valor="sentido_inverso">
+                                <desc>Descrição do supertipo</desc>                           
+				<frase>é exemplo de</frase>
+				<frase>é instância de</frase>
+			</supertipo>
+		</supertipo>
+		<supertipo valor="partição">
+			<desc>A dimensão de partição ocorre quando um conceito é relacionado com outro de forma a estabelecer uma disposição do "todo" para a "parte" ou vice-versa. Assim, na proposição "CASA tem JANELA", o conceito CASA representa o todo, enquanto que o conceito JANELA representa a parte. Adicionalmente, o sentido de "todo" e "parte" pode ser ligado ao sentido de tempo/execução/ocorrência. Assim, na proposição "DOENÇA tem fase INFECÇÃO", os dois conceitos estão ligados por uma dimensão de partição, porém não com o sentido físico, mas com o sentido de ocorrência/tempo. </desc>
+			<supertipo valor="temporalidade">
+				<desc>Esta dimensão representa a ligação semântica existente entre dois conceitos na qual um conceito é uma etapa, estágio de outro. Em outras palavras, esta dimensão representa uma relação de partição, porém não no sentido físico, e sim com a idéia de temporalidade/ocorrência. Por exemplo, na proposição "CICLO DA ÁGUA tem fase EVAPORAÇÃO", entende-se que EVAPORAÇÃO é uma etapa, uma ocorrência dentro do fenômeno CICLO DA ÁGUA.</desc>
+				<supertipo valor="sentido_direto">
+                                        <desc>Descrição do supertipo</desc>                                   
+					<frase>tem</frase>
+					<frase>tem etapa</frase>
+					<frase>tem fase</frase>
+					<frase>tem estágio</frase>
+					<frase>tem sessão</frase>
+					<frase>tem passo</frase>
+					<frase>tem parte</frase>
+					<frase>é agregado de</frase>
+					<frase>é composto de</frase>
+					<frase>inclui</frase>
+					<frase>contém</frase>
+					<frase>possui</frase>
+				</supertipo>
+				<supertipo valor="sentido_inverso">
+                                        <desc>Descrição do supertipo</desc>                                   
+					<frase>é etapa de</frase>
+					<frase>é fase de</frase>
+					<frase>é estágio de</frase>
+					<frase>é sessão de</frase>
+					<frase>é passo de</frase>
+					<frase>é parte de</frase>
+					<frase>é componente de</frase>
+					<frase>é incluído em</frase>
+					<frase>é contido em</frase>
+				</supertipo>
+			</supertipo>
+			<supertipo valor="física">
+				<desc>Esta dimensão agrega as frases de ligação utilizadas para representar o relacionamento existente entre dois conceitos quando um é parte/pedaço de outro, no sentido físico. Assim sendo, na proposição "CASA tem parte JANELA", podemos observar que o conceito JANELA representa uma parte, um pedaço, enquanto que o conceito CASA representa o todo. </desc>
+				<supertipo valor="sentido_direto">
+                                        <desc>Descrição do supertipo</desc>                                   
+					<frase>tem</frase>
+					<frase>tem parte</frase>
+					<frase>tem pedaço</frase>
+					<frase>tem seção</frase>
+					<frase>é agregado de</frase>
+					<frase>é composto de</frase>
+					<frase>inclui</frase>
+					<frase>contém</frase>
+					<frase>possui</frase>
+				</supertipo>
+				<supertipo valor="sentido_inverso">
+                                        <desc>Descrição do supertipo</desc>                                   
+					<frase>é parte de</frase>
+					<frase>é pedaço de</frase>
+					<frase>é seção de</frase>
+					<frase>é componente de</frase>
+					<frase>é incluído em</frase>
+					<frase>é contido em</frase>
+				</supertipo>
+			</supertipo>
+			<supertipo valor="organização">
+				<desc>Esta dimensão representa a ligação semântica existente entre dois conceitos na qual um conceito é uma parte e outro é o todo. Adicionalmente, o todo está organizado em suas partes. Assim, acrescenta-se o sentido de organização à idéia de partição. Por exemplo, na proposição "EDIFÍCIO está organizado em ANDARES", o conceitos EDIFÍCIO é o todo e o conceito ANDARES é a parte que organiza o todo.</desc>
+				<supertipo valor="sentido_direto">
+                                        <desc>Descrição do supertipo</desc>                                   
+					<frase>tem</frase>
+					<frase>tem seção</frase>
+					<frase>tem camada</frase>
+					<frase>tem nível</frase>
+					<frase>é organizado em</frase>
+					<frase>é agregado de</frase>
+					<frase>é composto de</frase>
+					<frase>inclui</frase>
+					<frase>contém</frase>
+					<frase>possui</frase>
+				</supertipo>
+				<supertipo valor="sentido_inverso">
+                                        <desc>Descrição do supertipo</desc>                                   
+					<frase>é seção de</frase>
+					<frase>é camada de</frase>
+					<frase>é nível de</frase>
+					<frase>é componente de</frase>
+					<frase>é incluído em</frase>
+					<frase>é contido em</frase>
+				</supertipo>
+			</supertipo>
+		</supertipo>
+		<supertipo valor="objetivação">
+			<desc>Esta dimensão representa a ligação existente entre dois conceitos quando um dos conceitos representa o objetivo/finalidade do outro. Assim, por exemplo, na proposição "ESTUDAR tem a finalidade de APRENDER", o conceito APRENDER é o objetivo do conceito ESTUDAR.</desc>
+			<supertipo valor="sentido_direto">
+                                <desc>Descrição do supertipo</desc>                           
+				<frase>tem a finalidade</frase>
+				<frase>tem o objetivo</frase>
+				<frase>tem como finalidade</frase>
+				<frase>tem como objetivo</frase>
+				<frase>objetiva</frase>
+			</supertipo>
+			<supertipo valor="sentido_inverso">
+                                <desc>Descrição do supertipo</desc>                           
+				<frase>é finalidade de</frase>
+				<frase>é objetivo de</frase>
+			</supertipo>
+		</supertipo>
+	</supertipo>
+	<supertipo valor="simetria">
+		<desc>A dimensão de simetria representa a relação semântica entre dois conceitos na qual a mudança da ordem de leitura dos conceitos não resulta em alteração substancial no sentido da proposição. Por exemplo, dada a proposição "PRÉDIO é o mesmo que EDIFÍCIO", se alterarmos a posição dos conceitos, a proposição resultante "EDIFÍCIO é o mesmo que PRÉDIO" mantém o sentido inicial. A dimensão de assimetria, por outro lado, representa a relação semântica entre conceitos na qual o significado da proposição é alterado caso haja mudança na posição dos conceitos.</desc>
+		<supertipo valor="temporalidade">
+			<desc>Esta dimensão representa a ligação semântica existente entre conceitos na qual um conceito tem a mesma duração ou ocorrência no tempo que outro. Assim, por exemplo, na proposição "7 DIAS leva o mesmo tempo que UMA SEMANA", o conceito 7 DIAS e o conceito UMA SEMANA possuem a mesma duração.</desc>
+			<supertipo valor="simultaneidade">
+				<desc>Esta dimensão representa a ligação semântica existente entre dois conceitos quando a ocorrência desses conceitos é simultânea no tempo, ou seja, quando os dois existem em um mesmo momento. Assim, por exemplo, na proposição "DIGESTÃO ocorre ao mesmo tempo que RESPIRAÇÃO", os conceitos DIGESTÃO e RESPIRAÇÃO, em algum momento no tempo, ocorrem paralelamente.</desc>
+				<frase>ocorre ao mesmo tempo que</frase>
+				<frase>existe ao mesmo tempo que</frase>
+				<frase>ocorre no mesmo momento que</frase>
+				<frase>existe no mesmo momento que</frase>
+				<frase>é coincidente com</frase>
+				<frase>é concomitante com</frase>
+				<frase>é paralelo com</frase>
+				<frase>é simultâneo com</frase>
+				<frase>ocorre paralelamente com</frase>
+			</supertipo>
+			<supertipo valor="duração">
+				<desc>Esta dimensão ocorre quando dois conceitos tem a mesma durabilidade. Assim, por exemplo, na proposição "UM MÊS tem a mesma duração de 30 DIAS", os conceitos UM MÊS e 30 DIAS existem durante a mesma quantidade de tempo.</desc>
+				<frase>leva</frase>
+				<frase>dura</frase>
+				<frase>leva o mesmo tempo que</frase>
+				<frase>dura o mesmo tempo que</frase>
+				<frase>tem a mesma durabilidade que</frase>
+				<frase>tem a mesma duração que</frase>
+			</supertipo>
+		</supertipo>
+		<supertipo valor="equivalência">
+			<desc>Esta dimensão ocorre quando, sob a ótica que está sendo analisada, dois conceitos são iguais. Em outras palavras, um conceito pode substituir o outro. Assim, por exemplo, do ponto de vista químico, a proposição "ÁGUA é o mesmo que H2O" significa que os conceitos ÁGUA e H2O representam a mesma coisa e podem ser usados indistintamente. É importante enfatizar, contudo, que a equivalência em um contexto de estudo não implica em equivalência em outros contextos. Desta forma, conceitos podem ser equivalentes em uma área e díspares em outra, dependendo dos aspectos relevantes sob análise.</desc>
+			<frase>é</frase>
+			<frase>é o mesmo que</frase>
+			<frase>representa o mesmo que</frase>
+			<frase>significa</frase>
+			<frase>significa o mesmo que</frase>
+			<frase>quer dizer o mesmo que</frase>
+			<frase>é igual a</frase>
+			<frase>é equivalente a</frase>
+			<frase>é idêntico a</frase>
+		</supertipo>
+	</supertipo>
+</taxonomia>
+

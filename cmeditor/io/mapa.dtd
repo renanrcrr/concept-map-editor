@@ -1,0 +1,64 @@
+<!ELEMENT mapa (conceitoontologia*, conceito+, exemplo*, legenda*, fraselivre*, frasecontextualizada*, arco+)>
+	<!ATTLIST mapa tipomapa NMTOKEN #REQUIRED>
+	<!ATTLIST mapa autor CDATA #IMPLIED>
+<!ELEMENT conceitoontologia EMPTY>
+	<!ATTLIST conceitoontologia texto CDATA #REQUIRED>
+<!ELEMENT conceito EMPTY>
+	<!ATTLIST conceito id ID #REQUIRED>
+	<!ATTLIST conceito texto CDATA #REQUIRED>
+	<!ATTLIST conceito x NMTOKEN #REQUIRED>
+	<!ATTLIST conceito y NMTOKEN #REQUIRED>
+	<!ATTLIST conceito corborda NMTOKEN #IMPLIED>
+	<!ATTLIST conceito corpreenchimento NMTOKEN #IMPLIED>
+	<!ATTLIST conceito nomeletra CDATA #IMPLIED>
+	<!ATTLIST conceito estiloletra NMTOKEN #IMPLIED>
+	<!ATTLIST conceito tamanholetra NMTOKEN #IMPLIED>
+	<!ATTLIST conceito corletra NMTOKEN #IMPLIED>
+	<!ATTLIST conceito anexotexto CDATA #IMPLIED>
+	<!ATTLIST conceito anexohtml CDATA #IMPLIED>
+<!ELEMENT exemplo EMPTY>
+	<!ATTLIST exemplo id ID #REQUIRED>
+	<!ATTLIST exemplo texto CDATA #REQUIRED>
+	<!ATTLIST exemplo x NMTOKEN #REQUIRED>
+	<!ATTLIST exemplo y NMTOKEN #REQUIRED>
+	<!ATTLIST exemplo corborda NMTOKEN #IMPLIED>
+	<!ATTLIST exemplo corpreenchimento NMTOKEN #IMPLIED>
+	<!ATTLIST exemplo nomeletra CDATA #IMPLIED>
+	<!ATTLIST exemplo estiloletra NMTOKEN #IMPLIED>
+	<!ATTLIST exemplo tamanholetra NMTOKEN #IMPLIED>
+	<!ATTLIST exemplo corletra NMTOKEN #IMPLIED>
+	<!ATTLIST exemplo anexotexto CDATA #IMPLIED>
+	<!ATTLIST exemplo anexohtml CDATA #IMPLIED>
+<!ELEMENT legenda EMPTY>
+	<!ATTLIST legenda texto CDATA #REQUIRED>
+	<!ATTLIST legenda x NMTOKEN #REQUIRED>
+	<!ATTLIST legenda y NMTOKEN #REQUIRED>
+	<!ATTLIST legenda nomeletra CDATA #IMPLIED>
+	<!ATTLIST legenda estiloletra NMTOKEN #IMPLIED>
+	<!ATTLIST legenda tamanholetra NMTOKEN #IMPLIED>
+	<!ATTLIST legenda corletra NMTOKEN #IMPLIED>
+<!ELEMENT fraselivre EMPTY>
+	<!ATTLIST fraselivre id ID #REQUIRED>
+	<!ATTLIST fraselivre texto CDATA #REQUIRED>
+	<!ATTLIST fraselivre x NMTOKEN #REQUIRED>
+	<!ATTLIST fraselivre y NMTOKEN #REQUIRED>
+	<!ATTLIST fraselivre nomeletra CDATA #IMPLIED>
+	<!ATTLIST fraselivre estiloletra NMTOKEN #IMPLIED>
+	<!ATTLIST fraselivre tamanholetra NMTOKEN #IMPLIED>
+	<!ATTLIST fraselivre corletra NMTOKEN #IMPLIED>
+<!ELEMENT frasecontextualizada EMPTY>
+	<!ATTLIST frasecontextualizada id ID #REQUIRED>
+	<!ATTLIST frasecontextualizada texto CDATA #REQUIRED>
+	<!ATTLIST frasecontextualizada supertipo CDATA #REQUIRED>
+	<!ATTLIST frasecontextualizada x NMTOKEN #REQUIRED>
+	<!ATTLIST frasecontextualizada y NMTOKEN #REQUIRED>
+	<!ATTLIST frasecontextualizada nomeletra CDATA #IMPLIED>
+	<!ATTLIST frasecontextualizada estiloletra NMTOKEN #IMPLIED>
+	<!ATTLIST frasecontextualizada tamanholetra NMTOKEN #IMPLIED>
+	<!ATTLIST frasecontextualizada corletra NMTOKEN #IMPLIED>
+<!ELEMENT arco EMPTY>
+	<!ATTLIST arco tipo NMTOKEN #REQUIRED>
+	<!ATTLIST arco origem IDREF #REQUIRED>
+	<!ATTLIST arco alvo IDREF #REQUIRED>
+	<!ATTLIST arco corlinha NMTOKEN #IMPLIED>
+	<!ATTLIST arco estilo NMTOKEN #IMPLIED>

@@ -1,0 +1,21 @@
+# All classes
+*.class
+
+# Package files and libraries such as jgraph
+*.jar
+
+# script files
+.sh
+
+# Log files
+.log
+
+# Theses files
+.txt
+.classpath
+.project
+.dat
+.MF
+
+
+

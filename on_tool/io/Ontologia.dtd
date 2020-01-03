@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT ontologia (dominio, valor-relacao+, relacao-binaria+, conceito*, legenda*, arco*)>
+
+<!ELEMENT dominio (#PCDATA)>
+                   
+    <!ELEMENT valor-relacao (supertipo)>
+        <!ATTLIST valor-relacao cod CDATA #IMPLIED>
+        <!ATTLIST valor-relacao x NMTOKEN #REQUIRED>
+        <!ATTLIST valor-relacao y NMTOKEN #REQUIRED>
+        <!ATTLIST valor-relacao nomeletra CDATA #IMPLIED>
+        <!ATTLIST valor-relacao estiloletra NMTOKEN #IMPLIED>
+        <!ATTLIST valor-relacao tamanholetra NMTOKEN #IMPLIED>
+        <!ATTLIST valor-relacao corletra NMTOKEN #IMPLIED>
+            <!ELEMENT supertipo (frase)*>
+            <!ATTLIST supertipo cadeia CDATA #IMPLIED>
+            <!ELEMENT frase (#PCDATA)>
+
+    <!ELEMENT relacao-binaria (conceito-origem, conceito-destino, cod-valor-relacao)>	
+    <!ATTLIST relacao-binaria cod CDATA #IMPLIED>
+            <!ELEMENT conceito-origem (#PCDATA)>
+            <!ELEMENT conceito-destino (#PCDATA)>		
+            <!ELEMENT cod-valor-relacao (#PCDATA)>
+
+    <!ELEMENT conceito EMPTY>
+        <!ATTLIST conceito valor CDATA #REQUIRED>
+	    <!ATTLIST conceito x NMTOKEN #REQUIRED>
+	    <!ATTLIST conceito y NMTOKEN #REQUIRED>
+	    <!ATTLIST conceito corborda NMTOKEN #IMPLIED>
+	    <!ATTLIST conceito corpreenchimento NMTOKEN #IMPLIED>
+	    <!ATTLIST conceito nomeletra CDATA #IMPLIED>
+	    <!ATTLIST conceito estiloletra NMTOKEN #IMPLIED>
+	    <!ATTLIST conceito tamanholetra NMTOKEN #IMPLIED>
+	    <!ATTLIST conceito corletra NMTOKEN #IMPLIED>
+
+    <!ELEMENT legenda EMPTY>
+        <!ATTLIST legenda texto CDATA #REQUIRED>
+        <!ATTLIST legenda x NMTOKEN #REQUIRED>
+        <!ATTLIST legenda y NMTOKEN #REQUIRED>
+        <!ATTLIST legenda nomeletra CDATA #IMPLIED>
+        <!ATTLIST legenda estiloletra NMTOKEN #IMPLIED>
+        <!ATTLIST legenda tamanholetra NMTOKEN #IMPLIED>
+        <!ATTLIST legenda corletra NMTOKEN #IMPLIED>
+
+    <!ELEMENT arco EMPTY>
+	<!ATTLIST arco origem IDREF #REQUIRED>
+	<!ATTLIST arco alvo IDREF #REQUIRED>
+	<!ATTLIST arco corlinha NMTOKEN #IMPLIED>
